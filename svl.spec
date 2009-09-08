@@ -2,7 +2,7 @@
 
 Name:		svl
 Version:	0.29
-Release:	%mkrel 8
+Release:	%mkrel 9
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Decentralized version control system using Zeroconf

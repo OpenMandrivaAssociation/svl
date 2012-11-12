@@ -1,0 +1,17 @@
+--- lib/SVL/Command/Help.pm	(revision 69)
++++ Help.pm	(patch Commands list level 1)
+@@ -20,7 +20,13 @@
+     $parser->output_string(\my $buf);
+     $parser->parse_file("$path");
+     print $buf;
+-  } else {
++  } elsif (not $what) {
++    print "svl: list of command :\n";
++    for (SVL::Command->commands())
++    {
++       print "     $_\n"; 
++    }  
++  } else {   
+     print "svl: no help found for $what, try 'svl help'\n";
+   }
+ }

@@ -1,0 +1,16 @@
+=== lib/SVL/Command/Help.pm
+==================================================================
+--- lib/SVL/Command/Help.pm	(revision 72)
++++ lib/SVL/Command/Help.pm	(revision 71)
+@@ -9,9 +9,8 @@
+   my ($self, $what) = @_;
+   my $path;
+   if ($what) {
++    ($path = $INC{'SVL/Command.pm'}) =~ s|.pm|/|;
++    $path .= ucfirst(lc($what)) . '.pm'; 
+-    $path =
+-      file(file($Bin)->parent, 'lib', 'SVL', 'Command',
+-      ucfirst(lc($what)) . '.pm');
+   } else {
+     $path = file(file($Bin)->parent, 'lib', 'SVL.pm');
+   }

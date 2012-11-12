@@ -1,0 +1,13 @@
+=== bin/svlserve
+==================================================================
+--- bin/svlserve	(revision 74)
++++ bin/svlserve	(revision 75)
+@@ -85,7 +85,7 @@
+   my $i      = 0;
+   my @shares = $sharing->list;
+   my $repos;
+-  my $hostip = hostip;
++  my $hostip = ip;
+   foreach my $share (@shares) {
+     $share->host($hostip);
+     $share->port($SVL::SVNSERVE_PORT);

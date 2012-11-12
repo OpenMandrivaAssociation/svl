@@ -1,0 +1,31 @@
+==== Patch <Hostip> level 1
+Source: [No source]
+Target: 13744ee3-6001-0410-9c99-fb1abd356889:/local/svl:69
+Log:
+- correct for newer version Sys::Hostip.
+=== lib/SVL/Bonjour.pm
+==================================================================
+--- lib/SVL/Bonjour.pm	(revision 69)
++++ lib/SVL/Bonjour.pm	(patch Hostip level 1)
+@@ -13,7 +13,7 @@
+ 
+ my $hostname = hostname;
+ my ($host) = split /\./, $hostname;
+-my $hostip = hostip;
++my $hostip = ip;
+ my $repository = "$ENV{USER}-$host\'s svk repository";
+ 
+ my $old_repos = "";
+
+==== BEGIN SVK PATCH BLOCK ====
+Version: svk 1.04 (linux)
+
+eJx9ks9q3DAQxn1ooXmLPShHZ61/3pULxhRaCi0lsGmui2SPExfFMrJ22wVBD3mBHvLAkeQk7aHk
+JvHN95uPmflkr9432Nd14REu/O76S1VdStfenocfKj10gzMWca/hCBpRr80NYn6UdxBUJ+0NuLrG
+wbxdzB+T4RnCIkNJZ8YZiQTbOwuAsGcN9w3xDQ1Wj4NoJhj31hiHiC9FkPYxUKvNDPtojMU8FhOE
+2VLdDRba0O0Ucw0qgZKZRjN/Mv+tCvoLhf6HsomU9e76a+ryOom8kNhz+H7QEOfwBFl/MOMPc7AX
+013q9zqPLrykymnSp72DX64D7WTqQYkHVqiOcK5IwSjjwEQvgCu15ZuNwr1EJC7wW5Y9vHt4c5Zl
+92+z7M/v+7OG/TvLJeVC7EpGORZECI4ZkVhJXvSsVarsSa+gTxNlhc9XrbEx66o3djXCT7CrI9h5
+MONqd5qr6rOZ3TBdhGUvr7omHhGynMRVupKq+j4O0ST1eenDDU3S3YbFWTiGz+EwdDHjWptW6vV8
+1GleiJYe0w1jADQviwLnBcNFLloh8l5hqTrKy+1WPAJC7+WI
+==== END SVK PATCH BLOCK ====

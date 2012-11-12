@@ -1,0 +1,14 @@
+=== bin/svlserve
+==================================================================
+--- bin/svlserve	(revision 75)
++++ bin/svlserve	(revision 76)
+@@ -65,7 +65,8 @@
+ 
+ my ($beacon_host, $beacon_port, $opendht);
+ if ($on_net) {
+-  my $beaconclient = file(file($Bin)->parent, 'lib', 'SVL', 'BeaconClient.pm');
++  (my $beaconclient = $INC{'SVL.pm'}) =~ s/.pm//;
++  $beaconclient .= '/BeaconClient.pm';
+   my $pipe = IO::Pipe->new;
+   $pipe->reader($^X, $beaconclient, $global_uuid);
+   my $first = <$pipe>;

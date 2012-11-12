@@ -1,0 +1,12 @@
+Index: Makefile.PL
+===================================================================
+--- Makefile.PL
++++ Makefile.PL	2005-09-22 10:35:02.000000000 +0200
+@@ -3,6 +3,7 @@
+ WriteMakefile
+ (
+           'PL_FILES' => {},
++          'EXE_FILES' => [ 'bin/client', 'bin/svl', 'bin/svlserve' ],
+           'INSTALLDIRS' => 'site',
+           'NAME' => 'SVL',
+           'VERSION_FROM' => 'lib/SVL.pm',

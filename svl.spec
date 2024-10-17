@@ -13,7 +13,7 @@ Patch2:     svl-0.29-better_help.diff
 Patch3:     svl-0.29-help.diff
 Patch4:     svl-0.29-svlserve_hostip_fix.diff 
 Patch5:     svl-0.29-svlserve_beacon_detection_fix.diff
-Url:		http://search.cpan.org/~abergman/SVL/
+Url:		https://search.cpan.org/~abergman/SVL/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-SVK-Simple
 BuildRequires: perl-App-CLI 
